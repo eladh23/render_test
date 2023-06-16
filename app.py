@@ -4,7 +4,7 @@ from flask_cors import CORS
 app = Flask(__name__)
 CORS(app)
 
-Students = [{"id": 1, "name": "Dan"}, {"id": 2, "name": "Yochai"}]
+Students = [{"id": 1, "name": "elad"}, {"id": 2, "name": "ofer"}]
 
 @app.route("/")
 def index():
