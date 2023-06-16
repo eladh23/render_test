@@ -1,12 +1,14 @@
-from flask import Flask, render_template
+from flask import Flask, jsonify
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)
 
-students = [{"id": 1, "name": "Dan"}, {"id": 2, "name": "Yochai"}]
+Students = [{"id": 1, "name": "Dan"}, {"id": 2, "name": "Yochai"}]
 
 @app.route("/")
 def index():
-    return render_template("students.html", students=students)
+    return jsonify(Students)
 
 if __name__ == "__main__":
     app.run()
